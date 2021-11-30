@@ -13,8 +13,19 @@ module.exports = (options, webpack) => {
       '@apollo/federation',
       '@apollo/subgraph',
       'ts-morph',
-      '@apollo/subgraph/dist/directives',
     ],
+    module: [
+      rules: [
+        {
+          test: /\.tsx?$/,
+          use: 'ts-loader',
+          exclude: /node_modules/,
+        },
+      ],
+    ],
+    resolve: {
+      extensions: ['.tsx', '.ts', '.js'],
+    },
     plugins: [
       ...options.plugins,
       new webpack.IgnorePlugin({
