@@ -12,4 +12,4 @@ if (env.PRODUCTION !== 'true') {
   logger.log('Starting in prod mode');
 }
 
-module.exports = handler;
+module.exports = { handler };
