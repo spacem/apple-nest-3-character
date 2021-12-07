@@ -1,0 +1,17 @@
+{
+  "name": "@spacem/apple-nest-3-character",
+  "version": "0.0.1",
+  "description": "",
+  "author": "spacem",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spacem/apple-nest-3-character"
+  },
+  "scripts": {
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
