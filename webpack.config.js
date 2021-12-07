@@ -2,19 +2,18 @@ module.exports = (options, webpack) => {
   const lazyImports = [
     '@nestjs/microservices/microservices-module',
     '@nestjs/websockets/socket-module',
+    '@apollo/gateway',
+    'apollo-server-fastify',
+    'class-transformer/storage',
+    '@apollo/federation',
+    '@apollo/subgraph',
+    'ts-morph',
   ];
 
   return {
     ...options,
-    externals: [
-      '@apollo/gateway',
-      'apollo-server-fastify',
-      'class-transformer/storage',
-      '@apollo/federation',
-      '@apollo/subgraph',
-      'ts-morph',
-    ],
-    module: [
+    entry: './src/main.ts',
+    module: {
       rules: [
         {
           test: /\.tsx?$/,
@@ -22,9 +21,15 @@ module.exports = (options, webpack) => {
           exclude: /node_modules/,
         },
       ],
-    ],
+    },
     resolve: {
       extensions: ['.tsx', '.ts', '.js'],
+    },
+    output: {
+      library: {
+        name: 'main',
+        type: 'umd',
+      },
     },
     plugins: [
       ...options.plugins,
