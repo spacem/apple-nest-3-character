@@ -6,7 +6,10 @@
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "https://github.com/spacem/apple-nest-3-character"
+    "url": "git@github.com:spacem/apple-nest-3-character.git"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
   },
   "scripts": {
   },
