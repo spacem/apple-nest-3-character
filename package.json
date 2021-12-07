@@ -3,8 +3,11 @@
   "version": "0.0.1",
   "description": "",
   "author": "spacem",
-  "private": true,
   "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spacem/apple-nest-3-character"
+  },
   "scripts": {
     "prebuild": "npm test && rimraf dist && rimraf coverage",
     "build": "nest build --webpack",
