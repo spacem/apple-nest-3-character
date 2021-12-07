@@ -19,7 +19,7 @@ import { MongooseModule } from '@nestjs/mongoose';
   imports: [
     GraphQLModule.forRoot({
       typeDefs: CHARACTER_TYPES,
-      path: env.GRAPH_URI,
+      path: `${env.GLOBAL_PREFIX}/${env.GRAPH_URI}`,
     }),
     MongooseModule.forRoot(env.APPLE_NEST_MONGO_URL),
     MongooseModule.forFeature([
