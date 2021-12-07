@@ -16,7 +16,7 @@ export async function bootstrap() {
     origin: '*', // NOTE: allowing * only for development
     methods: 'GET, POST',
   });
-  const globalPrefix = 'api';
+  const globalPrefix = env.GLOBAL_PREFIX;
   app.setGlobalPrefix(globalPrefix);
   await app.listen(env.PORT, () => {
     Logger.log(

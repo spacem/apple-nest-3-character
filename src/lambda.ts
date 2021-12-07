@@ -2,10 +2,11 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import serverless = require('serverless-http');
 import { Logger } from '@nestjs/common';
+import { env } from './env';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  const globalPrefix = '.netlify/functions/main';
+  const globalPrefix = env.GLOBAL_PREFIX;
   Logger.log('Bootstrapping server at ' + globalPrefix);
   app.setGlobalPrefix(globalPrefix);
   await app.init();
