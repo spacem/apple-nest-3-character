@@ -1,5 +1,5 @@
 {
-  "name": "@spacem/apple-nest-3-character",
+  "name": "@spacems/apple-nest-3-character",
   "version": "0.0.1",
   "description": "",
   "author": "spacem",
@@ -7,9 +7,6 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:spacems/apple-nest-3-character.git"
-  },
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
   },
   "scripts": {
     "prebuild": "npm test && rimraf dist && rimraf coverage",
