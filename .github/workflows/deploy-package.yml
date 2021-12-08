@@ -11,7 +11,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 16
-      - run: npm install
+      - run: npm ci
       - run: npm test
       - run: npm run build
       - run: cp lib-package.json dist/src/package.json
@@ -19,3 +19,4 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
           package: ./dist/src/package.json
+          access: public
